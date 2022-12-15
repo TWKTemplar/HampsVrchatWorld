@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Classic UIcons
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 1
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 752fdda7415500f468c562174df73226, type: 3}
+    - {fileID: 2800000, guid: 7870320e59380d2478e0262f68cb2f05, type: 3}
+    - {fileID: 2800000, guid: 8ba7199706b0f2a4ca587a73faedcfb1, type: 3}
+    - {fileID: 2800000, guid: 6f76e8b623f8fe144b7d75d68a750127, type: 3}
+    - {fileID: 2800000, guid: 103cb871d5c9caf4da72344184a4604f, type: 3}
+    - {fileID: 2800000, guid: 9b8e0cb5a61c726419999c23dc0df668, type: 3}
+    - {fileID: 2800000, guid: 2cd2c81eee85fb34eb53bcde95d7f232, type: 3}
+    - {fileID: 2800000, guid: a1370a66fa4e6f040a93034f0d692f51, type: 3}
+    - {fileID: 2800000, guid: 30bf3be3e67dd4541a7ffe6c46655b98, type: 3}
+    - {fileID: 2800000, guid: 5d4d13cc279209547a8fb50c212a97df, type: 3}
+    - {fileID: 2800000, guid: c47309dedf09b71449034a9ee3656e89, type: 3}
+    - {fileID: 2800000, guid: b279817327de11f4680a3cf8db7c8697, type: 3}
+    - {fileID: 2800000, guid: 555152c26dfdbdb45b2a8b354855b2ef, type: 3}
+    - {fileID: 2800000, guid: 5f7e48e368f406c4bb98ed5d0e40ecc4, type: 3}
+    - {fileID: 2800000, guid: 087b13c84d49ec74085f97f508cecceb, type: 3}
+    - {fileID: 2800000, guid: eb408019fd5f4344fb1a101987194ad0, type: 3}
+    - {fileID: 2800000, guid: 37de2ff1e3cdf8b4fb4506629ad50129, type: 3}
+    - {fileID: 2800000, guid: b9b22c1c24293df44a75fff4e4288628, type: 3}
+    - {fileID: 2800000, guid: 52bcf2496c3a387418b7b7b48c89ac1a, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 103cb871d5c9caf4da72344184a4604f, type: 3}
+  - {fileID: 21300000, guid: 37de2ff1e3cdf8b4fb4506629ad50129, type: 3}
+  - {fileID: 21300000, guid: 555152c26dfdbdb45b2a8b354855b2ef, type: 3}
+  - {fileID: 21300000, guid: b279817327de11f4680a3cf8db7c8697, type: 3}
+  - {fileID: 21300000, guid: 5f7e48e368f406c4bb98ed5d0e40ecc4, type: 3}
+  - {fileID: 21300000, guid: 30bf3be3e67dd4541a7ffe6c46655b98, type: 3}
+  - {fileID: 21300000, guid: 9b8e0cb5a61c726419999c23dc0df668, type: 3}
+  - {fileID: 21300000, guid: a1370a66fa4e6f040a93034f0d692f51, type: 3}
+  - {fileID: 21300000, guid: 6f76e8b623f8fe144b7d75d68a750127, type: 3}
+  - {fileID: 21300000, guid: 8ba7199706b0f2a4ca587a73faedcfb1, type: 3}
+  - {fileID: 21300000, guid: 752fdda7415500f468c562174df73226, type: 3}
+  - {fileID: 21300000, guid: 087b13c84d49ec74085f97f508cecceb, type: 3}
+  - {fileID: 21300000, guid: eb408019fd5f4344fb1a101987194ad0, type: 3}
+  - {fileID: 21300000, guid: 52bcf2496c3a387418b7b7b48c89ac1a, type: 3}
+  - {fileID: 21300000, guid: b9b22c1c24293df44a75fff4e4288628, type: 3}
+  - {fileID: 21300000, guid: 5d4d13cc279209547a8fb50c212a97df, type: 3}
+  - {fileID: 21300000, guid: 7870320e59380d2478e0262f68cb2f05, type: 3}
+  - {fileID: 21300000, guid: 2cd2c81eee85fb34eb53bcde95d7f232, type: 3}
+  - {fileID: 21300000, guid: c47309dedf09b71449034a9ee3656e89, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - loading_dark
+  - volumelow_dark
+  - seekforward_dark
+  - seekbackward_dark
+  - stopbutton_dark
+  - mask_circle
+  - lock_dark
+  - loop_dark
+  - headphones_dark
+  - volumeoff_dark
+  - checkmark_dark
+  - trash_dark
+  - volumehigh_dark
+  - resync_dark
+  - volumemid_dark
+  - pausebutton_dark
+  - downarrow_dark
+  - lockopen_dark
+  - playbutton_dark
+  m_Tag: Classic UIcons
+  m_IsVariant: 0

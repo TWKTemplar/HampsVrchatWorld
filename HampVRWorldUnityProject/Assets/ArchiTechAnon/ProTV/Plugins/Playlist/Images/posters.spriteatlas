@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 ;4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: posters
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 1024
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 1
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: ac7b7ebb13975364b80e0034c3e19b14, type: 3}
+    - {fileID: 2800000, guid: 81dfdebc56ad821469b47d86298ea2a8, type: 3}
+    - {fileID: 2800000, guid: ba8252a2ddcdc0b4b8874b3bba98a538, type: 3}
+    - {fileID: 2800000, guid: d67568cfa0e465c4c92de766a8cda9bc, type: 3}
+    - {fileID: 2800000, guid: 14b97b879c96f5d4e95466a54686c491, type: 3}
+    - {fileID: 2800000, guid: d57a95833cd9e9543999def55823964a, type: 3}
+    - {fileID: 2800000, guid: 4f01be531d27e3242b04b455f099964e, type: 3}
+    - {fileID: 2800000, guid: 83f6105ce71e38b41b60c4f84176a89f, type: 3}
+    - {fileID: 2800000, guid: 16d41d1376f30ac438cd045e0993b478, type: 3}
+    - {fileID: 2800000, guid: 93e89e510e867bd42ad5f6bc55a06391, type: 3}
+    - {fileID: 2800000, guid: 28e7519d97742f844a34be2894b3b25a, type: 3}
+    - {fileID: 2800000, guid: d4f4a41384dc86148afb5bd9c8c41640, type: 3}
+    - {fileID: 2800000, guid: 8b89cdf0cb90a1c4ea3569ab641f4ede, type: 3}
+    - {fileID: 2800000, guid: 52f7c3ff78f37044fba5c7debb23b5c9, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 8b89cdf0cb90a1c4ea3569ab641f4ede, type: 3}
+  - {fileID: 21300000, guid: 93e89e510e867bd42ad5f6bc55a06391, type: 3}
+  - {fileID: 21300000, guid: ba8252a2ddcdc0b4b8874b3bba98a538, type: 3}
+  - {fileID: 21300000, guid: d4f4a41384dc86148afb5bd9c8c41640, type: 3}
+  - {fileID: 21300000, guid: 16d41d1376f30ac438cd045e0993b478, type: 3}
+  - {fileID: 21300000, guid: 4f01be531d27e3242b04b455f099964e, type: 3}
+  - {fileID: 21300000, guid: d57a95833cd9e9543999def55823964a, type: 3}
+  - {fileID: 21300000, guid: 14b97b879c96f5d4e95466a54686c491, type: 3}
+  - {fileID: 21300000, guid: ac7b7ebb13975364b80e0034c3e19b14, type: 3}
+  - {fileID: 21300000, guid: 83f6105ce71e38b41b60c4f84176a89f, type: 3}
+  - {fileID: 21300000, guid: 81dfdebc56ad821469b47d86298ea2a8, type: 3}
+  - {fileID: 21300000, guid: 28e7519d97742f844a34be2894b3b25a, type: 3}
+  - {fileID: 21300000, guid: d67568cfa0e465c4c92de766a8cda9bc, type: 3}
+  - {fileID: 21300000, guid: 52f7c3ff78f37044fba5c7debb23b5c9, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Stessie - End Of Time (ft. Fokushi)
+  - Stessie - Find Me Here (ft. Bien)
+  - Stessie ; BLOOD CODE - Candy Heart
+  - Stessie - Celebrate
+  - Stessie - Friends EP
+  - Stessie - Ready
+  - Stessie - Take Flight (ft. QORA)
+  - Stessie - Together
+  - Jim Yosef ; Stessie - Free
+  - Stessie - High
+  - Puppet - Cargo (Stessie Remix)
+  - Stessie - Far Away
+  - Stessie - Utopia EP
+  - Stessie - Atmosphere
+  m_Tag: posters
+  m_IsVariant: 0

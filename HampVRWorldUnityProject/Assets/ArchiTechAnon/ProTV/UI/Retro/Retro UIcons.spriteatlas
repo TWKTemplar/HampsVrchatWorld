@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Retro UIcons
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 1
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 65984ad5b6925024b8a3e1636c6995f0, type: 3}
+    - {fileID: 2800000, guid: df55389e97d3cd24a80b73a0d156bfb5, type: 3}
+    - {fileID: 2800000, guid: 68d9ea961b1798e4b957dda96694e43f, type: 3}
+    - {fileID: 2800000, guid: 3fa2735c7eb249c488b5e4f1f2b2fe1a, type: 3}
+    - {fileID: 2800000, guid: fd19545cf88e09b41936e95a96a198d3, type: 3}
+    - {fileID: 2800000, guid: ffb07229ea989cf4587e9b54a0ec625b, type: 3}
+    - {fileID: 2800000, guid: ddbec7b5899d6984fa1a13e5891b85b2, type: 3}
+    - {fileID: 2800000, guid: a1ef5db22182cb6428786a509a9c1649, type: 3}
+    - {fileID: 2800000, guid: 3e3591d8b03abeb4b8c9b289fe200312, type: 3}
+    - {fileID: 2800000, guid: d554d7f891aa4574fa8f084217101930, type: 3}
+    - {fileID: 2800000, guid: 53a4b624b59e97544814d10ee889a111, type: 3}
+    - {fileID: 2800000, guid: 4ba9c50c13be72b4290c5d5b09169d22, type: 3}
+    - {fileID: 2800000, guid: bca6dd8d258a49a4ebb2a50b714554d2, type: 3}
+    - {fileID: 2800000, guid: c334a8935291fb8458385bea9759be5e, type: 3}
+    - {fileID: 2800000, guid: 6d152e804b299d1439f566a86df80b6f, type: 3}
+    - {fileID: 2800000, guid: 376282b3bad57334cb4a4fff4fb2730d, type: 3}
+    - {fileID: 2800000, guid: e02522a4ac747434c8e54d33190207e4, type: 3}
+    - {fileID: 2800000, guid: 191dd906561af3541a230a19d86144c3, type: 3}
+    - {fileID: 2800000, guid: 436856dc01ecd7d40870fb2e7fe8cbc6, type: 3}
+    - {fileID: 2800000, guid: c21ad7bad6ac832419447624610b5f4c, type: 3}
+    - {fileID: 2800000, guid: 48b14a9eee9e86242a4f30ad08bfb6f5, type: 3}
+    - {fileID: 2800000, guid: 6854ae1bffd369047ad53229843eddca, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 6d152e804b299d1439f566a86df80b6f, type: 3}
+  - {fileID: 21300000, guid: a1ef5db22182cb6428786a509a9c1649, type: 3}
+  - {fileID: 21300000, guid: c334a8935291fb8458385bea9759be5e, type: 3}
+  - {fileID: 21300000, guid: 376282b3bad57334cb4a4fff4fb2730d, type: 3}
+  - {fileID: 21300000, guid: 53a4b624b59e97544814d10ee889a111, type: 3}
+  - {fileID: 21300000, guid: e02522a4ac747434c8e54d33190207e4, type: 3}
+  - {fileID: 21300000, guid: ddbec7b5899d6984fa1a13e5891b85b2, type: 3}
+  - {fileID: 21300000, guid: 65984ad5b6925024b8a3e1636c6995f0, type: 3}
+  - {fileID: 21300000, guid: 191dd906561af3541a230a19d86144c3, type: 3}
+  - {fileID: 21300000, guid: 68d9ea961b1798e4b957dda96694e43f, type: 3}
+  - {fileID: 21300000, guid: 3e3591d8b03abeb4b8c9b289fe200312, type: 3}
+  - {fileID: 21300000, guid: d554d7f891aa4574fa8f084217101930, type: 3}
+  - {fileID: 21300000, guid: ffb07229ea989cf4587e9b54a0ec625b, type: 3}
+  - {fileID: 21300000, guid: c21ad7bad6ac832419447624610b5f4c, type: 3}
+  - {fileID: 21300000, guid: 6854ae1bffd369047ad53229843eddca, type: 3}
+  - {fileID: 21300000, guid: 4ba9c50c13be72b4290c5d5b09169d22, type: 3}
+  - {fileID: 21300000, guid: 3fa2735c7eb249c488b5e4f1f2b2fe1a, type: 3}
+  - {fileID: 21300000, guid: fd19545cf88e09b41936e95a96a198d3, type: 3}
+  - {fileID: 21300000, guid: 436856dc01ecd7d40870fb2e7fe8cbc6, type: 3}
+  - {fileID: 21300000, guid: bca6dd8d258a49a4ebb2a50b714554d2, type: 3}
+  - {fileID: 21300000, guid: df55389e97d3cd24a80b73a0d156bfb5, type: 3}
+  - {fileID: 21300000, guid: 48b14a9eee9e86242a4f30ad08bfb6f5, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Retro_Play
+  - Retro_Headphones
+  - Retro_Pause
+  - Retro_Plus
+  - Retro_Lock
+  - Retro_Reload
+  - Retro_Checkmark
+  - Retro_Arrow
+  - Retro_VolumeLow
+  - Retro_Trash
+  - Retro_VolumeHigh
+  - Retro_Loading
+  - Retro_Button_pushed
+  - Retro_Stop
+  - Retro_Thumb
+  - Retro_Minus
+  - Retro_Unlock
+  - Retro_Button
+  - Retro_VolumeMid
+  - Retro_Mute
+  - Retro_ArrowDouble
+  - Retro_Sync
+  m_Tag: Retro UIcons
+  m_IsVariant: 0
