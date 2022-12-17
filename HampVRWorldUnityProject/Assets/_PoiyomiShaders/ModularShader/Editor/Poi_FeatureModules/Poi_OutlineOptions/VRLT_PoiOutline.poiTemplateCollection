@@ -1,0 +1,211 @@
+#T#PoiOutlineProperties
+// Outline Vertex
+[HideInInspector][ToggleUI]_EnableOutlines ("Enable Outlines", float) = 0
+[Enum(Basic, 0, Tint, 1, Rim Light, 2, Directional, 3, DropShadow, 4)]_OutlineMode ("Mode", Int) = 0
+[Enum(Local, 0, World, 1)]_OutlineSpace ("Space", Int) = 0
+_OutlineTintMix ("Tint Mix--{condition_show:{type:PROPERTY_BOOL,data:_OutlineMode==1}}", Range(0, 1)) = 0
+_OutlineRimLightBlend ("Rim Light Blend--{condition_show:{type:PROPERTY_BOOL,data:_OutlineMode==2}}", Range(0, 1)) = 0
+_OutlinePersonaDirection ("directional Offset XY--{condition_show:{type:PROPERTY_BOOL,data:_OutlineMode==3}}", Vector) = (1, 0, 0, 0)
+_OutlineDropShadowOffset ("Drop Direction XY--{condition_show:{type:PROPERTY_BOOL,data:_OutlineMode==4}}", Vector) = (1, 0, 0, 0)
+[ToggleUI]_OutlineFixedSize ("Fixed Size?", Float) = 0
+_OutlinesMaxDistance ("Fixed Size Max Distance", Float) = 9999
+[Enum(Off, 0, Normals, 1, Mask VC.r, 2)]_OutlineUseVertexColors ("Vertex Color", Float) = 0
+[ToggleUI]_OutlineLit ("Enable Lighting", Float) = 1
+_LineWidth ("Width", Float) = 0
+_LineColor ("Color--{reference_property:_LineColorThemeIndex}", Color) = (1, 1, 1, 1)
+[HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _LineColorThemeIndex ("", Int) = 0
+_OutlineEmission ("Outline Emission", Float) = 0
+_OutlineTexture ("Outline Texture--{reference_properties:[_OutlineTexturePan, _OutlineTextureUV]}", 2D) = "white" { }
+[HideInInspector][Vector2]_OutlineTexturePan ("Outline Texture Pan", Vector) = (0, 0, 0, 0)
+[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _OutlineTextureUV ("UV", Int) = 0
+_OutlineMask ("Outline Mask--{reference_properties:[_OutlineMaskPan, _OutlineMaskUV]}", 2D) = "white" { }
+[HideInInspector][Vector2]_OutlineMaskPan ("Panning", Vector) = (0, 0, 0, 0)
+[HideInInspector][Enum(UV0, 0, UV1, 1, UV2, 2, UV3, 3)] _OutlineMaskUV ("UV", Int) = 0
+_OutlineShadowStrength ("Shadow Strength", Range(0, 1)) = 1
+
+[ThryToggleUI(true)]_OutlineHueShift ("<size=13><b>  Hue Shift</b></size>", Float) = 0
+_OutlineHueOffset ("Shift--{condition_showS:(_OutlineHueShift==1)}", Range(0, 1)) = 0
+_OutlineHueOffsetSpeed ("Shift Speed--{condition_showS:(_OutlineHueShift==1)}", Float) = 0
+[HideInInspector] m_start_outlineAdvanced ("Advanced", Float) = 0
+[ToggleUI]_OutlineClipAtZeroWidth ("Clip 0 Width", Float) = 0
+[ToggleUI]_OutlineOverrideAlpha ("Override Base Alpha", Float) = 0
+_Offset_Z ("Cam Z Offset", Float) = 0
+//[Vector2]_OutlineFadeDistance ("Outline distance Fade", Vector) = (0, 0, 0, 0)
+[Enum(UnityEngine.Rendering.CullMode)] _OutlineCull ("Cull", Float) = 1
+[Enum(UnityEngine.Rendering.CompareFunction)] _OutlineZTest ("ZTest", Float) = 4
+[HideInInspector] m_end_outlineAdvanced ("Advanced", Float) = 0
+
+#T#PoiOutlineStencilProperties
+// Outline Stencil
+[HideInInspector] m_start_OutlineStencil ("Outline Stencil", Float) = 0
+[IntRange] _OutlineStencilRef ("Stencil Reference Value", Range(0, 255)) = 0
+[IntRange] _OutlineStencilReadMask ("Stencil ReadMask Value", Range(0, 255)) = 255
+[IntRange] _OutlineStencilWriteMask ("Stencil WriteMask Value", Range(0, 255)) = 255
+[Enum(UnityEngine.Rendering.StencilOp)] _OutlineStencilPassOp ("Stencil Pass Op", Float) = 0
+[Enum(UnityEngine.Rendering.StencilOp)] _OutlineStencilFailOp ("Stencil Fail Op", Float) = 0
+[Enum(UnityEngine.Rendering.StencilOp)] _OutlineStencilZFailOp ("Stencil ZFail Op", Float) = 0
+[Enum(UnityEngine.Rendering.CompareFunction)] _OutlineStencilCompareFunction ("Stencil Compare Function", Float) = 8
+[HideInInspector] m_end_OutlineStencil ("Outline Stencil", Float) = 0
+
+// Outline Blending Options
+[HideInInspector] m_start_outlineBlending ("Outline Blending", Float) = 0
+[Enum(UnityEngine.Rendering.BlendMode)] _OutlineSrcBlend ("Source Blend", Int) = 1
+[Enum(UnityEngine.Rendering.BlendMode)] _OutlineDstBlend ("Destination Blend", Int) = 0
+[HideInInspector] m_end_outlineBlending ("Outline Blending", Float) = 0
+
+#T#PoiOutlineVariables
+#ifdef POI_PASS_OUTLINE
+	// outline Vertex Options
+	float _OutlineMode;
+	float4 _OutlinePersonaDirection;
+	float4 _OutlineDropShadowOffset;
+	float _OutlineUseVertexColors;
+	float _OutlineFixedSize;
+	float _EnableOutlines;
+	float _OutlinesMaxDistance;
+	float _LineWidth;
+	float _OutlineEmission;
+	float4 _LineColor;
+	float _OutlineOverrideAlpha;
+	float _OutlineSpace;
+	texture2D _OutlineTexture; //TODO make this dynamically not read for lock in
+	float4 _OutlineTexture_ST;
+	float2 _OutlineTexturePan;
+	float _OutlineTextureUV;
+	float4 _OutlineFadeDistance;
+	float4 _OutlineGlobalPan;
+	sampler2D _OutlineMask;
+	float4 _OutlineMask_ST;
+	float2 _OutlineMaskPan;
+	float _OutlineMaskUV;
+	float _OutlineRimLightBlend;
+	float _OutlineLit;
+	float _OutlineTintMix;
+	half _OutlineHueOffset;
+	half _OutlineHueShift;
+	half _OutlineHueOffsetSpeed;
+	float _OutlineShadowStrength;
+	float _LineColorThemeIndex;
+	float _Offset_Z;
+	float _OutlineClipAtZeroWidth;
+#endif
+
+#T#OutlineVertexOffset
+#ifdef POI_PASS_OUTLINE
+	float outlineMask = 1;
+	//TODO figure out why uvs can't be set dynamically
+	outlineMask = poiMax(tex2Dlod(_OutlineMask, float4(poiUV(o.uv[0], _OutlineMask_ST) + _Time.x * _OutlineMaskPan, 0, 0)).rgb);
+
+	//UNITY_BRANCH
+	if (_OutlineUseVertexColors == 2)
+	{
+		outlineMask *= v.color.r;
+	}
+
+	float3 outlineNormal = _OutlineSpace ? o.normal : v.normal;
+	//UNITY_BRANCH
+	if (_OutlineUseVertexColors == 1)
+	{
+		//TODO normals appear to be transformed before entering the vertex shader and I'm not sure how to achieve the same results with vertex colors
+		outlineNormal = UnityObjectToWorldNormal(v.color);
+	}
+
+	half offsetMultiplier = 1;
+	half distanceOffset = 1;
+	//UNITY_BRANCH
+	if (_OutlineFixedSize)
+	{
+		distanceOffset *= min(distance(_WorldSpaceCameraPos, mul(unity_ObjectToWorld, o.localPos).xyz), _OutlinesMaxDistance);
+	}
+	
+	float3 offset = outlineNormal * (_LineWidth * _EnableOutlines / 100) * outlineMask * distanceOffset;
+	
+	//UNITY_BRANCH
+	if (_OutlineMode == 2)
+	{
+		float3 lightDirection = normalize(_WorldSpaceLightPos0 + unity_SHAr.xyz + unity_SHAg.xyz + unity_SHAb.xyz);
+		offsetMultiplier = saturate(dot(lightDirection, outlineNormal));
+		offset *= offsetMultiplier;
+		offset *= distanceOffset;
+	}
+	else if (_OutlineMode == 3)
+	{
+		half3 viewNormal = mul((float3x3)UNITY_MATRIX_V, outlineNormal);
+		offsetMultiplier = saturate(dot(viewNormal.xy, normalize(_OutlinePersonaDirection.xy)));
+		
+		offset *= offsetMultiplier;
+		offset *= distanceOffset;
+	}
+	else if (_OutlineMode == 4)
+	{
+		offset = mul((float3x3)transpose(UNITY_MATRIX_V), _OutlineDropShadowOffset);
+		offset *= distanceOffset;
+	}
+	if (_OutlineSpace == 0)
+	{
+		localOffset += offset;
+		worldOffset += mul(unity_ObjectToWorld, offset);
+	}
+	else
+	{
+		localOffset += mul(unity_WorldToObject, offset);
+		worldOffset += offset;
+	}
+#endif
+
+#T#OutlineFragmentFunction
+#ifdef POI_PASS_OUTLINE
+	void applyOutlineColor(inout PoiFragData poiFragData, in PoiMesh poiMesh, in PoiLight poiLight, in PoiMods poiMods)
+	{
+		clip(_EnableOutlines - 0.01);
+		float OutlineMask = tex2D(_OutlineMask, TRANSFORM_TEX(poiMesh.uv[_OutlineMaskUV], _OutlineMask) + _Time.x * _OutlineMaskPan).r;
+		if (_OutlineClipAtZeroWidth)
+		{
+			clip(OutlineMask * _LineWidth - 0.001);
+		}
+		float4 col = POI2D_SAMPLER_PAN(_OutlineTexture, _MainTex, poiUV(poiMesh.uv[_OutlineTextureUV], _OutlineTexture_ST), _OutlineTexturePan) * float4(poiThemeColor(poiMods, _LineColor.rgb, _LineColorThemeIndex), _LineColor.a);
+		//UNITY_BRANCH
+		if (_OutlineMode == 0)
+		{
+			poiFragData.baseColor = col;
+		}
+		//UNITY_BRANCH
+		if (_OutlineMode == 1)
+		{
+			poiFragData.baseColor = lerp(float4(poiThemeColor(poiMods, _LineColor.rgb, _LineColorThemeIndex), _LineColor.a), poiFragData.baseColor, _OutlineTintMix) * col;
+		}
+		//UNITY_BRANCH
+		if (_OutlineMode == 2)
+		{
+			poiFragData.baseColor = lerp(poiFragData.baseColor, poiLight.directColor, _OutlineRimLightBlend) * col;
+		}
+
+		if (_OutlineOverrideAlpha)
+		{
+			poiFragData.alpha = col.a;
+		}
+		else
+		{
+			poiFragData.alpha *= col.a;
+		}
+
+		// Hue shift
+		//UNITY_BRANCH
+		if (_OutlineHueShift)
+		{
+			poiFragData.baseColor = hueShift(poiFragData.baseColor, _OutlineHueOffset +_OutlineHueOffsetSpeed * _Time.x);
+		}
+
+		poiFragData.emission += poiFragData.baseColor * _OutlineEmission;
+	}
+#endif
+
+#T#OutlineFragmentFunctionCall
+#ifdef POI_PASS_OUTLINE
+	applyOutlineColor(poiFragData, poiMesh, poiLight, poiMods);
+#endif
+
+#T#OutlineForceSmoothNormals
+#ifdef POI_PASS_OUTLINE
+	poiMesh.normals[1] = poiMesh.normals[0];
+#endif

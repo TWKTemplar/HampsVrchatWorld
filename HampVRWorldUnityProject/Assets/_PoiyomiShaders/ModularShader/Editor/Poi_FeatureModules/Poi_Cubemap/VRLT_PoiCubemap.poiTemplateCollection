@@ -1,0 +1,127 @@
+#T#PoiCubeMapProperties
+//ifex _CubeMapEnabled==0
+[HideInInspector] m_start_CubeMap ("CubeMap--{reference_property:_CubeMapEnabled}", Float) = 0
+[HideInInspector][ThryToggle(_CUBEMAP)]_CubeMapEnabled ("Enable CubeMap", Float) = 0
+[ThryWideEnum(Skybox, 0, Reflection, 1)] _CubeMapUVMode ("UV Mode", Int) = 1
+_CubeMapColor ("Color--{reference_property:_CubeMapColorThemeIndex}", Color) = (1, 1, 1, 1)
+[HideInInspector][ThryWideEnum(Off, 0, Theme Color 0, 1, Theme Color 1, 2, Theme Color 2, 3, Theme Color 3, 4, ColorChord 0, 5, ColorChord 1, 6, ColorChord 2, 7, ColorChord 3, 8, AL Theme 0, 9, AL Theme 1, 10, AL Theme 2, 11, AL Theme 3, 12)] _CubeMapColorThemeIndex ("", Int) = 0
+[TextureNoSO]_CubeMap ("CubeMap", Cube) = "" { }
+_CubeMapMask ("Mask--{reference_properties:[_CubeMapMaskPan, _CubeMapMaskUV, _CubeMapMaskInvert]}", 2D) = "white" { }
+[HideInInspector][Vector2]_CubeMapMaskPan ("Panning", Vector) = (0, 0, 0, 0)
+[HideInInspector][ThryWideEnum(UV0, 0, UV1, 1, UV2, 2, UV3, 3, Panosphere, 4, World Pos XZ, 5, Polar UV, 6, Distorted UV, 7)] _CubeMapMaskUV ("UV", Int) = 0
+[HideInInspector][ToggleUI]_CubeMapMaskInvert ("Invert", Float) = 0
+_CubeMapEmissionStrength ("Emission Strength", Range(0, 20)) = 0
+_CubeMapIntensity ("Color Strength", Range(0, 5)) = 1
+_CubeMapLightMask ("Hide in Shadow", Range(0, 1)) = 0
+_CubeMapReplace ("Replace With CubeMap", Range(0, 1)) = 1
+_CubeMapMultiply ("Multiply CubeMap", Range(0, 1)) = 0
+_CubeMapAdd ("Add CubeMap", Range(0, 1)) = 0
+[Enum(Vertex, 0, Pixel, 1)] _CubeMapNormal ("Normal to use", Int) = 1
+
+[Space(10)]
+[ThryHeaderLabel(Hue Shift, 13)]
+[Space(4)]
+[ToggleUI]_CubeMapHueShiftEnabled ("Enabled", Float) = 0
+_CubeMapHueShiftSpeed ("Shift Speed--{condition_showS:(_CubeMapHueShiftEnabled==1)}", Float) = 0
+_CubeMapHueShift ("Hue Shift--{condition_showS:(_CubeMapHueShiftEnabled==1)}", Range(0, 1)) = 0
+[HideInInspector] m_end_CubeMap ("CubeMap", Float) = 0
+//endex
+
+#T#PoiCubeMap_Keyword
+//ifex _CubeMapEnabled==0
+#pragma shader_feature_local _CUBEMAP
+//endex
+
+#T#PoiCubeMapVariables
+//ifex _CubeMapEnabled==0
+#ifdef _CUBEMAP
+	#if defined(PROP_CUBEMAP) || !defined(OPTIMIZER_ENABLED)
+		samplerCUBE _CubeMap;
+	#endif
+	#if defined(PROP_CUBEMAPMASK) || !defined(OPTIMIZER_ENABLED)
+		Texture2D _CubeMapMask;
+		float4 _CubeMapMask_ST;
+		float2 _CubeMapMaskPan;
+		float _CubeMapMaskUV;
+	#endif
+	float _CubeMapUVMode;
+	float _CubeMapMaskInvert;
+	float4 _CubeMapColor;
+	float _CubeMapColorThemeIndex;
+	float _CubeMapIntensity;
+	float _CubeMapReplace;
+	float _CubeMapMultiply;
+	float _CubeMapAdd;
+	float _CubeMapEnable;
+	float _CubeMapLightMask;
+	float _CubeMapEmissionStrength;
+	float _CubeMapNormal;
+	float _CubeMapHueShiftEnabled;
+	float _CubeMapHueShiftSpeed;
+	float _CubeMapHueShift;
+#endif
+//endex
+
+#T#PoiCubeMapFunctions
+//ifex _CubeMapEnabled==0
+#ifdef _CUBEMAP
+	void applyCubemap(inout PoiFragData poiFragData, in PoiCam poiCam, in PoiMesh poiMesh, in PoiLight poiLight, in PoiMods poiMods)
+	{
+		float3 CubeMapUV = 0;
+
+		switch(_CubeMapUVMode)
+		{
+			// Skybox
+			case 0:
+				{
+					CubeMapUV = -poiCam.viewDir;
+					break;
+			}
+			// Reflection
+			case 1:
+				{
+					CubeMapUV = poiCam.reflectionDir;
+					break;
+			}
+		}
+
+		#if defined(PROP_CUBEMAP) || !defined(OPTIMIZER_ENABLED)
+			float4 cubeMap = texCUBE(_CubeMap, CubeMapUV);
+			cubeMap.rgb *= poiThemeColor(poiMods, _CubeMapColor, _CubeMapColorThemeIndex);
+		#else
+			float4 cubeMap = float4(poiThemeColor(poiMods, _CubeMapColor, _CubeMapColorThemeIndex), 1);
+		#endif
+
+		cubeMap.rgb *= _CubeMapIntensity;
+		#if defined(PROP_CUBEMAPMASK) || !defined(OPTIMIZER_ENABLED)
+			float CubeMapMask = POI2D_SAMPLER_PAN(_CubeMapMask, _MainTex, poiUV(poiMesh.uv[_CubeMapMaskUV], _CubeMapMask_ST), _CubeMapMaskPan);
+		#else
+			float CubeMapMask = 1;
+		#endif
+		
+		if (_CubeMapMaskInvert)
+		{
+			CubeMapMask = 1 - CubeMapMask;
+		}
+		
+		//UNITY_BRANCH
+		if (_CubeMapHueShiftEnabled)
+		{
+			cubeMap.rgb = hueShift(cubeMap.rgb, _CubeMapHueShift + _Time.x * _CubeMapHueShiftSpeed);
+		}
+		CubeMapMask = min(CubeMapMask, lerp(1, poiLight.rampedLightMap, _CubeMapLightMask));
+		poiFragData.baseColor.rgb = lerp(poiFragData.baseColor.rgb, cubeMap.rgb, _CubeMapReplace * CubeMapMask * cubeMap.a);
+		poiFragData.baseColor.rgb *= lerp(1, cubeMap.rgb, _CubeMapMultiply * CubeMapMask * cubeMap.a);
+		poiFragData.baseColor.rgb += cubeMap.rgb * _CubeMapAdd * CubeMapMask * cubeMap.a;
+		poiFragData.emission += cubeMap.rgb * _CubeMapEmissionStrength * CubeMapMask * cubeMap.a;
+	}
+#endif
+//endex
+
+#T#PoiCubeMapFunctionCalls
+//ifex _CubeMapEnabled==0
+#ifdef _CUBEMAP
+	applyCubemap(poiFragData, poiCam, poiMesh, poiLight, poiMods);
+#endif
+//endex
+

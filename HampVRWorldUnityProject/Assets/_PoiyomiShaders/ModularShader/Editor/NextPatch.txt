@@ -1,0 +1,18 @@
+Next Patch
+Fixed rimlighting bugs and added additional functionality
+Fixed pathing going pink on lock in if no pathing texture was provided
+Iridescence audio link now functions
+Fixed Scrolling Emission width less than 0 causing nans
+Removed center out emission audio link width as it wasn't being used
+New penetration system
+A bunch of other things I didn't write down and I forgot
+
+[ThryToggleUI(true)] _TPSDepthMaskEnabled ("<size=13><b>  TPS Depth Enabled</b></size>", Float) = 0
+_TPSMaskStrength ("Mask Strength--{condition_showS:(_TPSDepthMaskEnabled==1)}", Range(0,1)) = 1
+float TPSMaskStrength;
+#ifdef TPS_Penetrator
+	if (_TPSDepthMaskEnabled)
+	{
+		clearCoatMask = lerp(clearCoatMask, 1, TPSBufferedDepth(poiMesh.localPos, poiMesh.vertexColor) * _TPSMaskStrength);
+	}
+#endif

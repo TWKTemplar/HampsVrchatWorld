@@ -1,0 +1,55 @@
+#T#OutlinePassTags
+Tags { "LightMode" = "ForwardBase" }
+
+#T#OutlinePassStencil
+Stencil
+{
+	Ref [_OutlineStencilRef]
+	ReadMask [_OutlineStencilReadMask]
+	WriteMask [_OutlineStencilWriteMask]
+	Comp [_OutlineStencilCompareFunction]
+	Pass [_OutlineStencilPassOp]
+	Fail [_OutlineStencilFailOp]
+	ZFail [_OutlineStencilZFailOp]
+}
+
+#T#OutlinePassBlendSettings
+/*
+ColorMask [_ColorMask]
+BlendOp [_BlendOp], [_BlendOpAlpha]
+Blend [_SrcBlend] [_DstBlend]
+ZWrite [_ZWrite]
+AlphaToMask [_AlphaToCoverage]
+Cull [_OutlineCull]
+*/
+AlphaToMask [_AlphaToCoverage]
+ZTest [_OutlineZTest]
+Cull [_OutlineCull]
+Blend [_OutlineSrcBlend] [_OutlineDstBlend]
+
+
+#T#OutlinePassOnlyKeywords
+#pragma multi_compile_fwdbase
+#pragma multi_compile_instancing
+#pragma multi_compile_fog
+#pragma multi_compile _ VERTEXLIGHT_ON
+#define POI_PASS_OUTLINE
+
+#T#OutlinePassKeywords
+#K#OUTLINE_PASS_KEYWORDS
+
+#T#OutlinePassPropertyVariables
+#K#OUTLINE_PROPERTY_VARIABLES
+
+#T#OutlinePassPrograms
+#K#VERTEX_OUTLINE_DATA_STRUCTURES
+#K#VERTEX_OUTLINE_FUNCTIONS_EARLY
+#K#VERTEX_OUTLINE_FUNCTIONS
+#K#VERTEX_OUTLINE_FUNCTIONS_LATE
+#K#VERTEX_OUTLINE_PROGRAM
+
+#K#FRAGMENT_OUTLINE_DATA_STRUCTURES
+#K#FRAGMENT_OUTLINE_FUNCTIONS_EARLY
+#K#FRAGMENT_OUTLINE_FUNCTIONS
+#K#FRAGMENT_OUTLINE_FUNCTIONS_LATE
+#K#FRAGMENT_OUTLINE_PROGRAM

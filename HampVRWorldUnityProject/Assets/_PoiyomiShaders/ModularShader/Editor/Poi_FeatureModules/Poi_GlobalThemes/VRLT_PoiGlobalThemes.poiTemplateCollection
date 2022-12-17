@@ -1,0 +1,26 @@
+#T#PoiGlobalThemesProperties
+[HideInInspector] m_start_GlobalThemes ("Global Themes", Float) = 0
+[HDR]_GlobalThemeColor0 ("Color 0", Color) = (1, 1, 1, 1)
+[HDR]_GlobalThemeColor1 ("Color 1", Color) = (1, 1, 1, 1)
+[HDR]_GlobalThemeColor2 ("Color 2", Color) = (1, 1, 1, 1)
+[HDR]_GlobalThemeColor3 ("Color 3", Color) = (1, 1, 1, 1)
+[HideInInspector] m_end_GlobalThemes ("Global Themes", Float) = 0
+
+#T#PoiGlobalThemesVariables
+float4 _GlobalThemeColor0;
+float4 _GlobalThemeColor1;
+float4 _GlobalThemeColor2;
+float4 _GlobalThemeColor3;
+
+#T#PoiGlobalThemesFunctions
+void calculateGlobalThemes(inout PoiMods poiMods)
+{
+    poiMods.globalColorTheme[0] = _GlobalThemeColor0;
+    poiMods.globalColorTheme[1] = _GlobalThemeColor1;
+    poiMods.globalColorTheme[2] = _GlobalThemeColor2;
+    poiMods.globalColorTheme[3] = _GlobalThemeColor3;
+}
+
+#T#PoiGlobalThemesFunctionCalls
+calculateGlobalThemes(poiMods);
+
