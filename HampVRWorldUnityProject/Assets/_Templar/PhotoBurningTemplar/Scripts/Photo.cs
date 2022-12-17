@@ -12,7 +12,6 @@ public class Photo : UdonSharpBehaviour
     public MeshRenderer meshRenderer;
     public BurningPhoto BurningPhoto;
     public float BurnTime = 15;
-    public GameObject Effects;
     void Start()
     {
         if(OriginalPosition == null) OriginalPosition = GetComponentInParent<Transform>();
@@ -36,7 +35,6 @@ public class Photo : UdonSharpBehaviour
         meshRenderer.enabled = true;
         BurningPhoto.skinnedMeshRenderer.enabled = false;
         BurningPhoto.ResetPhoto();
-        Effects.SetActive(false);
     }
     public void ActivateBurningVersion()
     {
@@ -44,7 +42,6 @@ public class Photo : UdonSharpBehaviour
         BurningPhoto.skinnedMeshRenderer.enabled = true;
         BurningPhoto.skinnedMeshRenderer.materials = meshRenderer.materials;
         BurningPhoto.StartBurning();
-        Effects.SetActive(true);
     }
 
 
