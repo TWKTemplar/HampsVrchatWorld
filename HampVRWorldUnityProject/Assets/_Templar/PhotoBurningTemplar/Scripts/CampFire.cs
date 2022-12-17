@@ -14,13 +14,13 @@ public class CampFire : UdonSharpBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Something entered the trigger");
+        Debug.Log("Something entered the fireplace");
         if(other != null)
         {
             if(other.gameObject.layer ==13)//is a pickup object
             {
                 photo = other.GetComponent<Photo>();
-                photo.RespawnMultiplayer();
+                if(photo != null) photo.DoBurn();
             }
         }
     }
