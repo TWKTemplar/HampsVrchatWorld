@@ -24,8 +24,7 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11500000, guid: f29d4f383cdd5f04d89258161405178f, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -239,7 +238,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: meshRenderer
+      Data: BurnTime
     - Name: $v
       Entry: 7
       Data: 14|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
@@ -251,7 +250,7 @@ MonoBehaviour:
       Data: 16|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: UnityEngine.MeshRenderer, UnityEngine.CoreModule
+      Data: System.Single, mscorlib
     - Name: 
       Entry: 8
       Data: 
@@ -263,13 +262,13 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: UnityEngineMeshRenderer
+      Data: SystemSingle
     - Name: symbolOriginalName
       Entry: 1
-      Data: meshRenderer
+      Data: BurnTime
     - Name: symbolUniqueName
       Entry: 1
-      Data: meshRenderer
+      Data: BurnTime
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -302,7 +301,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: BurningPhoto
+      Data: Effects
     - Name: $v
       Entry: 7
       Data: 18|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
@@ -314,7 +313,7 @@ MonoBehaviour:
       Data: 20|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: BurningPhoto, Assembly-CSharp
+      Data: UnityEngine.GameObject, UnityEngine.CoreModule
     - Name: 
       Entry: 8
       Data: 
@@ -326,13 +325,13 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: VRCUdonUdonBehaviour
+      Data: UnityEngineGameObject
     - Name: symbolOriginalName
       Entry: 1
-      Data: BurningPhoto
+      Data: Effects
     - Name: symbolUniqueName
       Entry: 1
-      Data: BurningPhoto
+      Data: Effects
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
@@ -352,8 +351,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: userBehaviourSource
-      Entry: 10
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -365,7 +364,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: BurnTime
+      Data: animator
     - Name: $v
       Entry: 7
       Data: 22|UdonSharp.Compiler.FieldDefinition, UdonSharp.Editor
@@ -377,7 +376,7 @@ MonoBehaviour:
       Data: 24|System.RuntimeType, mscorlib
     - Name: 
       Entry: 1
-      Data: System.Single, mscorlib
+      Data: UnityEngine.Animator, UnityEngine.AnimationModule
     - Name: 
       Entry: 8
       Data: 
@@ -389,13 +388,13 @@ MonoBehaviour:
       Data: 0
     - Name: symbolResolvedTypeName
       Entry: 1
-      Data: SystemSingle
+      Data: UnityEngineAnimator
     - Name: symbolOriginalName
       Entry: 1
-      Data: BurnTime
+      Data: animator
     - Name: symbolUniqueName
       Entry: 1
-      Data: BurnTime
+      Data: animator
     - Name: symbolDefaultValue
       Entry: 6
       Data: 
