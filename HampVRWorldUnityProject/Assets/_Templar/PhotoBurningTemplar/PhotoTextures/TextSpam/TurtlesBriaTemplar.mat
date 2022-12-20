@@ -8,15 +8,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TurtlesBriaTemplar
-  m_Shader: {fileID: 4800000, guid: 1787129096f7e4d45814aa4d2a62d45c, type: 3}
-  m_ShaderKeywords: COLOR_GRADING_HDR POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
-    POI_LIGHT_DATA_ADDITIVE_ENABLE POI_VERTEXLIGHT_ON VIGNETTE_MASKED _ALPHATEST_ON
-    _LIGHTINGMODE_FLAT _RIMSTYLE_POIYOMI _TPS_ANIMATEDTOGGLE_ON
+  m_Shader: {fileID: 4800000, guid: bd1ed8cd46465f04ca222d14cbeeca34, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap:
+    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
+    RenderType: Opaque
     _MainBrightnessAnimated: 1
   disabledShaderPasses: []
   m_SavedProperties:
@@ -1329,7 +1329,7 @@ Material:
     - _ScrollingEmission3: 0
     - _Set_HighColorMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 0
+    - _ShaderOptimizerEnabled: 1
     - _ShadingEnabled: 1
     - _ShadingShadeMapBlendType: 0
     - _Shadow2ndBlur: 0.3
