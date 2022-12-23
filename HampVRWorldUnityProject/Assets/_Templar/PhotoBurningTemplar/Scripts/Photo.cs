@@ -1,4 +1,4 @@
-﻿
+
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
@@ -33,11 +33,11 @@ public class Photo : UdonSharpBehaviour
         myPickUp.Drop();
         Networking.SetOwner(localplayer, gameObject);
         gameObject.transform.position = OriginalPosition.transform.position;
-        StopBurningAnim();
+        SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "StopBurningAnim");
     }
     public void StartBurningAnim()
     {
-        if(Effects != null) Effects.SetActive(true);
+        if (Effects != null) Effects.SetActive(true);
         if (animator != null) animator.SetBool("IsBurning", true);
     }
     public void StopBurningAnim()
