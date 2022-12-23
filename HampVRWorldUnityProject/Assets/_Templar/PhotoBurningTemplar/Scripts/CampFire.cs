@@ -24,4 +24,16 @@ public class CampFire : UdonSharpBehaviour
             }
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Something exited the fireplace");
+        if (other != null)
+        {
+            if (other.gameObject.layer == 13)//is a pickup object
+            {
+                photo = other.GetComponent<Photo>();
+                if (photo != null) photo.CoolDown();
+            }
+        }
+    }
 }

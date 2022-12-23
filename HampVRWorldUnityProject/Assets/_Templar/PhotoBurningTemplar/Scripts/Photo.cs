@@ -11,8 +11,9 @@ public class Photo : UdonSharpBehaviour
     public VRC_Pickup myPickUp;
     public float BurnTime = 15;
     public GameObject Effects;
-
+    public bool RespawnAfterBurn = true;
     public Animator animator;
+    public bool CoolDownOnFireRemoval = false;
     void Start()
     {
         if(OriginalPosition == null) OriginalPosition = GetComponentInParent<Transform>();
@@ -25,15 +26,28 @@ public class Photo : UdonSharpBehaviour
         if (localplayer.isMaster)
         {
             SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "StartBurningAnim");
-            SendCustomEventDelayedSeconds("ResetObject", BurnTime);
+            if (CoolDownOnFireRemoval == false) SendCustomEventDelayedSeconds("ResetObject", BurnTime);
         }   
     }
     public void ResetObject()//resets everything
     {
-        myPickUp.Drop();
-        Networking.SetOwner(localplayer, gameObject);
-        gameObject.transform.position = OriginalPosition.transform.position;
+        if (RespawnAfterBurn)
+        {
+            myPickUp.Drop();
+            Networking.SetOwner(localplayer, gameObject);
+            gameObject.transform.position = OriginalPosition.transform.position;
+        }
         SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "StopBurningAnim");
+    }
+    public void CoolDown()
+    {
+        if (localplayer.isMaster)
+        {
+            if (CoolDownOnFireRemoval == true)
+            {
+                SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "StopBurningAnim");
+            }
+        }
     }
     public void StartBurningAnim()
     {
