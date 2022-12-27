@@ -7,7 +7,8 @@ using VRC.Udon;
 public class MirrorToggle : UdonSharpBehaviour
 {
     public GameObject bestMirror;
-    public bool mirrorIsOn;
+    public GameObject hqMirror;
+    //public bool mirrorIsOn;
 
     void Start()
     {
@@ -30,5 +31,7 @@ public class MirrorToggle : UdonSharpBehaviour
     public override void Interact()
     {
      bestMirror.SetActive(!bestMirror.activeInHierarchy);
+        hqMirror.SetActive(false);
+
     }
 }
