@@ -14,7 +14,7 @@ public class CameraPickUp : UdonSharpBehaviour
     public float ImageBlendSpeed = 10;
     public float TimeSinceLastPhotoTaken = 0f;
     public float TimeSinceLastPhotoTakenCoolDown = 5f;
-    public GameObject CameraPhoto;
+    public Photo CameraPhoto;
     public Transform CameraPhotoSpawnPoint;
 
     public void Start()
@@ -44,11 +44,16 @@ public class CameraPickUp : UdonSharpBehaviour
     public override void OnPickupUseDown()
     {
         SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "LocalTakePicture");
+        ResetPhoto();//Stop photo burning
         SendCustomEventDelayedSeconds("SpawnPhoto", 0.5f);
     }
     public void SpawnPhoto()
     {
         SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "MasterMovePhoto");
+    }
+    public void ResetPhoto()//Stop photo burning
+    {
+        CameraPhoto.ResetObject();//Stop photo burning
     }
     public void MasterMovePhoto()
     {
@@ -59,7 +64,7 @@ public class CameraPickUp : UdonSharpBehaviour
             {
                 if(CameraPhotoSpawnPoint != null)
                 {
-                    Networking.SetOwner(localplayer, CameraPhoto);
+                    Networking.SetOwner(localplayer, CameraPhoto.gameObject);
                     CameraPhoto.transform.position = CameraPhotoSpawnPoint.transform.position;
                     CameraPhoto.transform.rotation = CameraPhotoSpawnPoint.transform.rotation;
                 }
