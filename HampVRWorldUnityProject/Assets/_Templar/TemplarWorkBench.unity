@@ -1694,7 +1694,7 @@ GameObject:
   - component: {fileID: 1800805599}
   - component: {fileID: 1800805598}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2008,3 +2008,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c336522aa8f3aaa4d93a2d9e068615e9, type: 3}
+--- !u!1001 &8286339880889763835
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.554
+      objectReference: {fileID: 0}
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.674
+      objectReference: {fileID: 0}
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.167
+      objectReference: {fileID: 0}
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.27059832
+      objectReference: {fileID: 0}
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.2705985
+      objectReference: {fileID: 0}
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6532814
+      objectReference: {fileID: 0}
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.65328133
+      objectReference: {fileID: 0}
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 219643815499547381, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -225
+      objectReference: {fileID: 0}
+    - target: {fileID: 596590948159723599, guid: 9cf08ff48d249c44d911ed577b1db82c,
+        type: 3}
+      propertyPath: m_Name
+      value: PickupCamera
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9cf08ff48d249c44d911ed577b1db82c, type: 3}
