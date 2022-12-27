@@ -13,18 +13,22 @@ public class MirrorToggle : UdonSharpBehaviour
     {
 
     }
-
+    //
+    //public override void Interact()
+    //{
+    //    if (mirrorIsOn == false)
+    //    {
+    //        bestMirror.SetActive(true);
+    //        mirrorIsOn = true;
+    //    }
+    //    else
+    //    {
+    //        bestMirror.SetActive(false);
+    //        mirrorIsOn = false;
+    //    }
+    //}
     public override void Interact()
     {
-        if (mirrorIsOn == false)
-        {
-            bestMirror.SetActive(true);
-            mirrorIsOn = true;
-        }
-        else
-        {
-            bestMirror.SetActive(false);
-            mirrorIsOn = false;
-        }
+     bestMirror.SetActive(!bestMirror.activeInHierarchy);
     }
 }
