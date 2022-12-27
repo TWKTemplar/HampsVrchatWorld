@@ -7,14 +7,15 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SpilledCoffeeOverlay
-  m_Shader: {fileID: 4800000, guid: 41497052e9c135547816198afe527532, type: 3}
+  m_Name: SpilledCoffee None
+  m_Shader: {fileID: 4800000, guid: 1787129096f7e4d45814aa4d2a62d45c, type: 3}
   m_ShaderKeywords: COLOR_GRADING_HDR POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
-    POI_LIGHT_DATA_ADDITIVE_ENABLE POI_VERTEXLIGHT_ON VIGNETTE_MASKED
+    POI_LIGHT_DATA_ADDITIVE_ENABLE POI_VERTEXLIGHT_ON VIGNETTE_MASKED _LIGHTINGMODE_FLAT
+    _RIMSTYLE_POIYOMI _TPS_ANIMATEDTOGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2000
   stringTagMap:
     OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
     RenderType: Opaque
@@ -280,7 +281,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5e03b28fa32673d4583b33463cdb3123, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -473,7 +474,7 @@ Material:
     - _AlphaDistanceFadeMinAlpha: 0
     - _AlphaDistanceFadeType: 1
     - _AlphaDitherGradient: 0.1
-    - _AlphaDithering: 1
+    - _AlphaDithering: 0
     - _AlphaForceOpaque: 0
     - _AlphaFresnel: 0
     - _AlphaFresnelAlpha: 0
@@ -642,7 +643,7 @@ Material:
     - _CurvFix: 1
     - _CurvatureU: 0
     - _CurvatureV: 0
-    - _Cutoff: 0.5
+    - _Cutoff: 0.348
     - _Decal0Depth: 0
     - _Decal0HueAngleStrength: 0
     - _Decal0MaskChannel: 0
@@ -808,7 +809,7 @@ Material:
     - _DistortionStrength1AudioLinkBand: 0
     - _DistortionStrengthAudioLinkBand: 0
     - _DistortionUvToDistort: 0
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _EmissionAL0Enabled: 0
     - _EmissionAL0MultipliersBand: 0
     - _EmissionAL0StrengthBand: 0
@@ -1019,7 +1020,7 @@ Material:
     - _GlitterUV: 0
     - _GlitterUseSurfaceColor: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.233
     - _GlossyReflections: 1
     - _GreenColorThemeIndex: 0
     - _GreenTextureUV: 0
@@ -1193,7 +1194,7 @@ Material:
     - _MochieSpecularStrength: 1
     - _MochieSpecularStrength2: 1
     - _MochieSpecularTintThemeIndex: 0
-    - _Mode: 2
+    - _Mode: 0
     - _ModelAngleMax: 90
     - _ModelAngleMin: 45
     - _OcclusionStrength: 1
@@ -1330,7 +1331,7 @@ Material:
     - _ScrollingEmission3: 0
     - _Set_HighColorMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 1
+    - _ShaderOptimizerEnabled: 0
     - _ShadingEnabled: 1
     - _ShadingShadeMapBlendType: 0
     - _Shadow2ndBlur: 0.3
@@ -1348,7 +1349,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _Specular2ndLayer: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _SssBumpBlur: 0.7
     - _SssScale: 1
     - _StencilCompareFunction: 8
@@ -1470,7 +1471,7 @@ Material:
     - _VertexRoundingRangeBand: 0
     - _VertexWorldTranslationALBand: 0
     - _ZTest: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     - _glitterFrequencyLinearEmissive: 20
     - footer_discord: 0
     - footer_github: 0
