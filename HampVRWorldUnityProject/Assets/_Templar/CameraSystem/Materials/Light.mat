@@ -7,18 +7,16 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SpilledCoffeeOverlay
-  m_Shader: {fileID: 4800000, guid: 41497052e9c135547816198afe527532, type: 3}
-  m_ShaderKeywords: COLOR_GRADING_HDR POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE
-    POI_LIGHT_DATA_ADDITIVE_ENABLE POI_VERTEXLIGHT_ON VIGNETTE_MASKED
-  m_LightmapFlags: 4
+  m_Name: Light
+  m_Shader: {fileID: 4800000, guid: 1787129096f7e4d45814aa4d2a62d45c, type: 3}
+  m_ShaderKeywords: POI_LIGHT_DATA_ADDITIVE_DIRECTIONAL_ENABLE POI_LIGHT_DATA_ADDITIVE_ENABLE
+    POI_VERTEXLIGHT_ON VIGNETTE_MASKED _EMISSION _LIGHTINGMODE_FLAT _RIMSTYLE_POIYOMI
+    _TPS_ANIMATEDTOGGLE_ON
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    OriginalShader: .poiyomi/Poiyomi 8.1/Poiyomi Pro
-    RenderType: Opaque
-    _MainBrightnessAnimated: 1
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -280,7 +278,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 5e03b28fa32673d4583b33463cdb3123, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
@@ -473,7 +471,7 @@ Material:
     - _AlphaDistanceFadeMinAlpha: 0
     - _AlphaDistanceFadeType: 1
     - _AlphaDitherGradient: 0.1
-    - _AlphaDithering: 1
+    - _AlphaDithering: 0
     - _AlphaForceOpaque: 0
     - _AlphaFresnel: 0
     - _AlphaFresnelAlpha: 0
@@ -808,7 +806,7 @@ Material:
     - _DistortionStrength1AudioLinkBand: 0
     - _DistortionStrengthAudioLinkBand: 0
     - _DistortionUvToDistort: 0
-    - _DstBlend: 10
+    - _DstBlend: 0
     - _EmissionAL0Enabled: 0
     - _EmissionAL0MultipliersBand: 0
     - _EmissionAL0StrengthBand: 0
@@ -845,7 +843,7 @@ Material:
     - _EmissionColor2ThemeIndex: 0
     - _EmissionColor3ThemeIndex: 0
     - _EmissionColorThemeIndex: 0
-    - _EmissionHueShift: 0
+    - _EmissionHueShift: 0.739
     - _EmissionHueShift1: 0
     - _EmissionHueShift2: 0
     - _EmissionHueShift3: 0
@@ -922,7 +920,7 @@ Material:
     - _EnableDissolveAudioLink: 0
     - _EnableDistortion: 0
     - _EnableDistortionAudioLink: 0
-    - _EnableEmission: 0
+    - _EnableEmission: 1
     - _EnableEmission1: 0
     - _EnableEmission2: 0
     - _EnableEmission3: 0
@@ -1111,7 +1109,7 @@ Material:
     - _MainALHueShiftCTIndex: 0
     - _MainBrightness: 0
     - _MainColorAdjustTextureUV: 0
-    - _MainColorAdjustToggle: 1
+    - _MainColorAdjustToggle: 0
     - _MainHueALCTEnabled: 0
     - _MainHueALMotionSpeed: 1
     - _MainHueShift: 0
@@ -1193,7 +1191,7 @@ Material:
     - _MochieSpecularStrength: 1
     - _MochieSpecularStrength2: 1
     - _MochieSpecularTintThemeIndex: 0
-    - _Mode: 2
+    - _Mode: 0
     - _ModelAngleMax: 90
     - _ModelAngleMin: 45
     - _OcclusionStrength: 1
@@ -1330,7 +1328,7 @@ Material:
     - _ScrollingEmission3: 0
     - _Set_HighColorMaskUV: 0
     - _ShadeColor_Step: 0
-    - _ShaderOptimizerEnabled: 1
+    - _ShaderOptimizerEnabled: 0
     - _ShadingEnabled: 1
     - _ShadingShadeMapBlendType: 0
     - _Shadow2ndBlur: 0.3
@@ -1348,7 +1346,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _Specular2ndLayer: 0
     - _SpecularHighlights: 1
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _SssBumpBlur: 0.7
     - _SssScale: 1
     - _StencilCompareFunction: 8
@@ -1470,7 +1468,7 @@ Material:
     - _VertexRoundingRangeBand: 0
     - _VertexWorldTranslationALBand: 0
     - _ZTest: 4
-    - _ZWrite: 0
+    - _ZWrite: 1
     - _glitterFrequencyLinearEmissive: 20
     - footer_discord: 0
     - footer_github: 0
@@ -1545,12 +1543,12 @@ Material:
     - m_end_uvPanosphere: 0
     - m_end_uvPolar: 0
     - m_end_vertexManipulation: 0
-    - m_lightingCategory: 0
-    - m_mainCategory: 1
+    - m_lightingCategory: 1
+    - m_mainCategory: 0
     - m_modifierCategory: 0
     - m_postprocessing: 0
-    - m_renderingCategory: 0
-    - m_specialFXCategory: 0
+    - m_renderingCategory: 1
+    - m_specialFXCategory: 1
     - m_start_ALDecalSpectrum: 0
     - m_start_Alpha: 0
     - m_start_Aniso: 0
@@ -1573,12 +1571,12 @@ Material:
     - m_start_GlobalThemes: 0
     - m_start_Iridescence: 0
     - m_start_IridescenceAudioLink: 0
-    - m_start_MainHueShift: 1
+    - m_start_MainHueShift: 0
     - m_start_MainVertexColors: 0
     - m_start_Matcap2: 0
     - m_start_PathAudioLink: 0
     - m_start_PoiLightData: 0
-    - m_start_PoiShading: 0
+    - m_start_PoiShading: 1
     - m_start_RGBMask: 0
     - m_start_RimAudioLink: 0
     - m_start_StencilPassOptions: 0
@@ -1599,7 +1597,7 @@ Material:
     - m_start_emission1Options: 0
     - m_start_emission2Options: 0
     - m_start_emission3Options: 0
-    - m_start_emissionOptions: 0
+    - m_start_emissionOptions: 1
     - m_start_flipBook: 0
     - m_start_glitter: 0
     - m_start_matcap: 0
@@ -1754,7 +1752,7 @@ Material:
     - _EmissionAL2StrengthMod: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionAL3Multipliers: {r: 1, g: 1, b: 0, a: 0}
     - _EmissionAL3StrengthMod: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 14.754423, g: 14.754423, b: 14.754423, a: 1}
     - _EmissionColor1: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor2: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor3: {r: 1, g: 1, b: 1, a: 1}

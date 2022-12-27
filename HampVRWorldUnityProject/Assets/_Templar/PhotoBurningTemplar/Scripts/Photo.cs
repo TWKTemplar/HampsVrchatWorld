@@ -14,11 +14,31 @@ public class Photo : UdonSharpBehaviour
     public bool RespawnAfterBurn = true;
     public Animator animator;
     public bool CoolDownOnFireRemoval = false;
+    public float LiveBurningTime = -100;
     void Start()
     {
         if(OriginalPosition == null) OriginalPosition = GetComponentInParent<Transform>();
         localplayer = Networking.LocalPlayer;
         if (animator == null) animator = GetComponent<Animator>();
+    }
+    public void Update()
+    {
+        if (localplayer.isMaster)
+        {
+            if(LiveBurningTime > 0)
+            {
+                LiveBurningTime -= Time.deltaTime;
+            }
+            else
+            {
+                if(LiveBurningTime > -99)
+                {
+                    LiveBurningTime = -100;
+                    ResetObject();
+                }
+            }
+                
+        }
     }
     public void DoBurn()
     {
@@ -26,11 +46,12 @@ public class Photo : UdonSharpBehaviour
         if (localplayer.isMaster)
         {
             SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "StartBurningAnim");
-            if (CoolDownOnFireRemoval == false) SendCustomEventDelayedSeconds("ResetObject", BurnTime);
+            if (CoolDownOnFireRemoval == false) LiveBurningTime = BurnTime;
         }   
     }
-    public void ResetObject()//resets everything
+    public void ResetObject()//resets everything(Networked)
     {
+        LiveBurningTime = -100;
         if (RespawnAfterBurn)
         {
             myPickUp.Drop();
