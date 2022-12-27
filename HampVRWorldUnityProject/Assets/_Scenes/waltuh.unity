@@ -230,7 +230,7 @@ MonoBehaviour:
   interactTextPlacement: {fileID: 0}
   interactText: wagmi!
   interactTextGO: {fileID: 0}
-  proximity: 6
+  proximity: 2.1
   SynchronizePosition: 0
   AllowCollisionOwnershipTransfer: 0
   Reliable: 0
