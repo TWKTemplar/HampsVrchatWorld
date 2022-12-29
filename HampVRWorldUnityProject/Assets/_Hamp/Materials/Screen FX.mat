@@ -222,7 +222,7 @@ Material:
     - _OutlineThresh: 1000
     - _OutlineType: 0
     - _Parallax: 0.02
-    - _PixelBlurSamples: 43
+    - _PixelBlurSamples: 16
     - _PixelationStr: 0
     - _Pulse: 0
     - _PulseColor: 0
