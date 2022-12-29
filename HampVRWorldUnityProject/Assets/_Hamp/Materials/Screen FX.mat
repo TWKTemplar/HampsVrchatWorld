@@ -140,7 +140,7 @@ Material:
     - _BlurOpacity: 1
     - _BlurRadius: 1
     - _BlurSamples: 10
-    - _BlurStr: 0.422
+    - _BlurStr: 0.244
     - _BlurUseGlobal: 1
     - _BlurY: 0
     - _Brightness: 1
@@ -166,9 +166,9 @@ Material:
     - _DistortionStr: 0.5
     - _DistortionUseGlobal: 1
     - _DoF: 1
-    - _DoFFade: 14
+    - _DoFFade: 10.8
     - _DoFP2O: 0
-    - _DoFRadius: 20.6
+    - _DoFRadius: 33.4
     - _DstBlend: 0
     - _FilterModel: 0
     - _FilterStrength: 1
