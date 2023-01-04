@@ -1,0 +1,14 @@
+Quest対応noribenQuestWaterシェーダー
+https://noriben.booth.pm/items/1671087
+
+V001 初期
+V002 Quest環境で使うと反射が暗いのを修正
+V003 反射の向きがおかしいのを修正
+V004 ノーマルマップ関連の動きがおかしいのを修正。CustomCubeMapの項目を追加。
+V005 ライティングが視点や距離でおかしくなるのを修正
+2020/6/12 V006 ディレクショナルライトが無いときでも独自にライトの向きを定義して動かすモードをつけた
+2020/6/12 V007 ZWriteを指定できるように
+2022/03/12 V008 Single Pass Stereo (Instanced)レンダリングに対応。フォルダ構成を変更。
+
+noriben
+https://twitter.com/noriben327
