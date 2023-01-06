@@ -2559,7 +2559,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/914cf108c686a334d9c396ecc
 				float2 mainUV = poiMesh.uv[float(0)].xy;
 				if (float(0))
 				{
-					mainUV = sharpSample(float4(0.001953125,0.001953125,512,512), mainUV);
+					mainUV = sharpSample(float4(0.001,0.001,1000,1000), mainUV);
 				}
 				float4 mainTexture = UNITY_SAMPLE_TEX2D(_MainTex, poiUV(mainUV, float4(1,1,0,0)) + _Time.x * float4(0,0,0,0));
 				float3 mainNormal = UnpackScaleNormal(POI2D_SAMPLER_PAN(_BumpMap, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0)), float(1));
@@ -2847,8 +2847,8 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/914cf108c686a334d9c396ecc
 				poiLight.vertexNDotH = max(0.00001, dot(poiMesh.normals[0], poiLight.halfDir));
 				poiLight.lightMap = 1;
 				#endif
-				poiFragData.baseColor = mainTexture.rgb * poiThemeColor(poiMods, float4(1,1,1,1).rgb, float(0));
-				poiFragData.alpha = mainTexture.a * float4(1,1,1,1).a;
+				poiFragData.baseColor = mainTexture.rgb * poiThemeColor(poiMods, float4(0,0,0,1).rgb, float(0));
+				poiFragData.alpha = mainTexture.a * float4(0,0,0,1).a;
 				//ifex float(1)==0
 				#ifdef COLOR_GRADING_HDR
 				#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
@@ -5000,7 +5000,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/914cf108c686a334d9c396ecc
 				float2 mainUV = poiMesh.uv[float(0)].xy;
 				if (float(0))
 				{
-					mainUV = sharpSample(float4(0.001953125,0.001953125,512,512), mainUV);
+					mainUV = sharpSample(float4(0.001,0.001,1000,1000), mainUV);
 				}
 				float4 mainTexture = UNITY_SAMPLE_TEX2D(_MainTex, poiUV(mainUV, float4(1,1,0,0)) + _Time.x * float4(0,0,0,0));
 				float3 mainNormal = UnpackScaleNormal(POI2D_SAMPLER_PAN(_BumpMap, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0)), float(1));
@@ -5288,8 +5288,8 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/914cf108c686a334d9c396ecc
 				poiLight.vertexNDotH = max(0.00001, dot(poiMesh.normals[0], poiLight.halfDir));
 				poiLight.lightMap = 1;
 				#endif
-				poiFragData.baseColor = mainTexture.rgb * poiThemeColor(poiMods, float4(1,1,1,1).rgb, float(0));
-				poiFragData.alpha = mainTexture.a * float4(1,1,1,1).a;
+				poiFragData.baseColor = mainTexture.rgb * poiThemeColor(poiMods, float4(0,0,0,1).rgb, float(0));
+				poiFragData.alpha = mainTexture.a * float4(0,0,0,1).a;
 				//ifex float(1)==0
 				#ifdef COLOR_GRADING_HDR
 				#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
@@ -6668,7 +6668,7 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/914cf108c686a334d9c396ecc
 				float2 mainUV = poiMesh.uv[float(0)].xy;
 				if (float(0))
 				{
-					mainUV = sharpSample(float4(0.001953125,0.001953125,512,512), mainUV);
+					mainUV = sharpSample(float4(0.001,0.001,1000,1000), mainUV);
 				}
 				float4 mainTexture = UNITY_SAMPLE_TEX2D(_MainTex, poiUV(mainUV, float4(1,1,0,0)) + _Time.x * float4(0,0,0,0));
 				float3 mainNormal = UnpackScaleNormal(POI2D_SAMPLER_PAN(_BumpMap, _MainTex, poiUV(poiMesh.uv[float(0)], float4(1,1,0,0)), float4(0,0,0,0)), float(1));
@@ -6694,8 +6694,8 @@ Shader "Hidden/Locked/.poiyomi/Poiyomi 8.1/Poiyomi Pro/914cf108c686a334d9c396ecc
 				poiCam.vDotN = abs(dot(poiCam.viewDir, poiMesh.normals[1]));
 				poiCam.clipPos = i.pos;
 				poiCam.worldDirection = i.worldDirection;
-				poiFragData.baseColor = mainTexture.rgb * poiThemeColor(poiMods, float4(1,1,1,1).rgb, float(0));
-				poiFragData.alpha = mainTexture.a * float4(1,1,1,1).a;
+				poiFragData.baseColor = mainTexture.rgb * poiThemeColor(poiMods, float4(0,0,0,1).rgb, float(0));
+				poiFragData.alpha = mainTexture.a * float4(0,0,0,1).a;
 				//ifex float(1)==0
 				#ifdef COLOR_GRADING_HDR
 				#if defined(PROP_MAINCOLORADJUSTTEXTURE) || !defined(OPTIMIZER_ENABLED)
