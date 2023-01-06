@@ -37,7 +37,7 @@ Material:
     - _Diffuse: 1
     - _Fresnel: 0
     - _NoLight: 0
-    - _NormalPower: 0.01
+    - _NormalPower: 0.001
     - _RefMode: 1
     - _Reflection: 4.92
     - _Scrollx: 0
@@ -46,7 +46,7 @@ Material:
     - _Transparency: 0.885
     - _WaveHeight: 0.04
     - _WaveNormalPower: 0.5
-    - _WaveScale: 0.3
+    - _WaveScale: 0.179
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 0.03773582, g: 0.03773582, b: 0.03773582, a: 1}
