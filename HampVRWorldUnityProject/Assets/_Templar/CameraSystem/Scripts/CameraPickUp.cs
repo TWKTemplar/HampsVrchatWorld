@@ -54,6 +54,7 @@ public class CameraPickUp : UdonSharpBehaviour
     public void ResetPhoto()//Stop photo burning
     {
         CameraPhoto.ResetObject();//Stop photo burning
+        CameraPhoto.RbSetIsKinamaticTrueNetworkCall();//Turns on gravity
     }
     public void MasterMovePhoto()
     {

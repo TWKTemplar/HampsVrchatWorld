@@ -40,11 +40,32 @@ public class Photo : UdonSharpBehaviour
                 
         }
     }
+    #region Toggle Gravity
+    public void RbSetIsKinamaticTrueNetworkCall()
+    {
+        SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "RbSetIsKinamaticTrueLocal");
+        RbSetIsKinamaticTrueLocal();
+    }
+    public void RbSetIsKinamaticFalseNetworkCall()
+    {
+        SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "RbSetIsKinamaticFalseLocal");
+        RbSetIsKinamaticFalseLocal();
+    }
+    public void RbSetIsKinamaticTrueLocal()
+    {
+        GetComponent<Rigidbody>().isKinematic = true;
+    }
+    public void RbSetIsKinamaticFalseLocal()
+    {
+        GetComponent<Rigidbody>().isKinematic = false;
+    }
+    #endregion
     public void DoBurn()
     {
         myPickUp.Drop();
         if (localplayer.isMaster)
         {
+            RbSetIsKinamaticFalseNetworkCall();//Turns on gravity
             SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "StartBurningAnim");
             if (CoolDownOnFireRemoval == false) LiveBurningTime = BurnTime;
         }   
